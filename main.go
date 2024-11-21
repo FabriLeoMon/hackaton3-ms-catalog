@@ -3,7 +3,6 @@ package main
 import (
 	"fmt"
 	"log"
-	"os"
     "github.com/joho/godotenv"
 
 	"github.com/Set-Forget/Hackaton3/ms-catalog/config"
@@ -20,11 +19,11 @@ func main() {
     }
     
     // Get Supabase connection details from environment variables
-    host := os.Getenv("SUPABASE_HOST")
-    port := os.Getenv("SUPABASE_PORT")
-    user := os.Getenv("SUPABASE_USER")
-    password := os.Getenv("SUPABASE_PASSWORD")
-    dbname := os.Getenv("SUPABASE_DBNAME")
+    host := "aws-0-us-east-1.pooler.supabase.com"
+    port := "6543"
+    user := "postgres.hlflpxnttokwivejeffn"
+    password := "hackaton3setandforget"
+    dbname := "postgres"
 
     if host == "" || port == "" || user == "" || password == "" || dbname == "" {
         fmt.Println(host)
