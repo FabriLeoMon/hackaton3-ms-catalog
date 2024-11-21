@@ -3,7 +3,6 @@ package main
 import (
 	"fmt"
 	"log"
-    "github.com/joho/godotenv"
 
 	"github.com/Set-Forget/Hackaton3/ms-catalog/config"
 	"github.com/Set-Forget/Hackaton3/ms-catalog/handlers"
@@ -12,11 +11,6 @@ import (
 )
 
 func main() {
-
-    err := godotenv.Load()
-    if err != nil {
-        log.Fatalf("Error loading .env file: %v", err)
-    }
     
     // Get Supabase connection details from environment variables
     host := "aws-0-us-east-1.pooler.supabase.com"
